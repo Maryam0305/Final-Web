@@ -1,0 +1,153 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    display: flex;
+    align-items: center; /* Memusatkan secara vertikal */
+    justify-content: center; /* Memusatkan secara horizontal */
+    height: 100vh; /* Menggunakan tinggi viewport */
+    background-color: #f7f7f7;
+    animation: fadeIn 1.5s ease; /* Animasi fade-in untuk body */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Container for form */
+.container {
+    width: 90%; /* Lebar default lebih fleksibel */
+    max-width: 400px; /* Maksimal lebar form */
+    padding: 40px 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transform: scale(0.9);
+    animation: slideIn 1s ease forwards; /* Animasi slide-in */
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Title */
+.container h1 {
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #d4af37;
+    animation: bounce 1s ease infinite; /* Animasi bounce */
+}
+
+/* Bounce animation for title */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Form field label */
+.container label {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 16px;
+}
+
+/* Input fields */
+.container input[type="text"],
+.container input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease; /* Animasi input focus */
+}
+
+.container input[type="text"]:focus,
+.container input[type="password"]:focus {
+    border-color: #d4af37;
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+}
+
+/* Submit button */
+.container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #d4af37;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Efek hover */
+}
+
+/* Button hover effect */
+.container button:hover {
+    background-color: #8b5a2b;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Add space for error/success message */
+.container p {
+    margin-top: 15px;
+    color: #d9534f;
+    font-size: 14px;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    .container h1 {
+        font-size: 22px;
+    }
+
+    .container button {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .container h1 {
+        font-size: 20px;
+    }
+
+    .container button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
